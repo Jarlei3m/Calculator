@@ -1,6 +1,7 @@
 from typing import Dict
 from pytest import raises
 from .calculator_2 import Calculator2
+from src.drivers.numpy_handler import NumpyHandler
 
 class MockRequest:
   def __init__(self, body:Dict) -> None:
@@ -12,7 +13,8 @@ def test_calculate():
   }
   mock_request = MockRequest(body=mock_body)
   
-  calculator_2 = Calculator2()
+  driver = NumpyHandler()
+  calculator_2 = Calculator2(driver)
   formatted_response = calculator_2.calculate(mock_request)
 
   assert isinstance(formatted_response, dict)
