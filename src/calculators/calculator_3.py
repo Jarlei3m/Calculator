@@ -13,7 +13,7 @@ class Calculator3:
     variance_result = self.__calculate_variance(input_data)
     multiplication_result = self.__calculate_multiplication(input_data)
 
-    self.__verify_result(variance_result, multiplication_result)
+    self.__verify_results(variance_result, multiplication_result)
 
     formated_response = self.__format_response(variance_result)
 
@@ -38,9 +38,9 @@ class Calculator3:
     
     return multiplication
   
-  def __verify_result(self, variance_result: float, multiplication_result: float) -> None:
-    if variance_result > multiplication_result:
-      raise Exception("Process failed: Multiplication lesser then variance")
+  def __verify_results(self, variance_result: float, multiplication_result: float) -> None:
+    if variance_result < multiplication_result:
+      raise Exception('Process failed: Variance lesser then multiplication')
     
   def __format_response(self, variance: float) -> Dict:
     return {
