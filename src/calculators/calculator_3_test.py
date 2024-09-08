@@ -37,6 +37,3 @@ def test_calculate():
   response = calculator_3.calculate(mock_request)
 
   assert response == {'data': {'Calculator': 3, 'variance': 10000000, 'success': True}}
-  print()
-  print(response)
-
