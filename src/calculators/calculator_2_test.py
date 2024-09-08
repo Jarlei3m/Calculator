@@ -1,7 +1,7 @@
 from typing import Dict, List
 from .calculator_2 import Calculator2
 from src.drivers.numpy_handler import NumpyHandler
-from src.drivers.interfaces.driver_hanlder_interface import DriverHandlerInterface
+from src.drivers.interfaces.driver_handler_interface import DriverHandlerInterface
 
 class MockRequest:
   def __init__(self, body:Dict) -> None:

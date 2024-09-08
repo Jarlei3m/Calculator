@@ -1,6 +1,6 @@
 from typing import Dict, List
 from flask import request as FlaskRequest
-from src.drivers.interfaces.driver_hanlder_interface import DriverHandlerInterface
+from src.drivers.interfaces.driver_handler_interface import DriverHandlerInterface
 from src.errors.http_bad_request import HttpBadRequest
 from src.errors.http_unprocessable_entity import HttpUnprocessableEntity
 
